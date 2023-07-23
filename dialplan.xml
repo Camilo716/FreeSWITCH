@@ -1,0 +1,9 @@
+<include>
+  <context name="sip-dialplan">
+    <extension name="echo">
+      <condition field="destination_number" expression="^9196$">
+	<action application="echo" />
+      </condition>
+    </extension>
+  </context>
+</include>

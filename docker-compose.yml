@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    freeswitch:
+      image: readytalk/freeswitch-docker
+      environment:
+        FS_XMLRPC: 8081
+        FS_EVENT_PASSWORD: ClueCon
+        FS_DEFAULT_PASSWORD: extension
+      volumes:
+        - ./event_socket.conf.xml:/etc/freeswitch/autoload_configs/event_socket.conf.xml:ro
+        - ./dialplan.xml:/etc/freeswitch/dialplan/sip-dialplan.xml:rw
+      networks:
+        red:
+          ipv4_address: 172.16.238.10
+
+networks:
+  red:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.238.0/24"
