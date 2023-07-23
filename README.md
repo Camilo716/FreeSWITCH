@@ -1,6 +1,9 @@
-# freeswitch
+# FreeSWITCH
 
-ipv4 servidor `172.16.238.10`
-puerto servidor 5060
+ipv4: `172.16.238.10`
 
-extensiones desde `1000` a `1019` y clave `extension`
+port: `5060`
+
+extensions: from `1000` to `1019` 
+
+password: `extension`
