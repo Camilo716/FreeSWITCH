@@ -10,7 +10,7 @@ services:
       volumes:
         - ./event_socket.conf.xml:/etc/freeswitch/autoload_configs/event_socket.conf.xml:ro
         - ./dialplan.xml:/etc/freeswitch/dialplan/sip-dialplan.xml:rw
-        - ABSOLUTE_ROUTE_TO_AUTOCALLS_PROJECT/AutoCallsApi/wwwroot/audios:/audios:rw
+        - ROUTE_TO_AUTOCALLS_PROJECT/AutoCallsApi/wwwroot/audios:/audios:rw
       networks:
         red:
           ipv4_address: 172.16.238.10
