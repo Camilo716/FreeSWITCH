@@ -6,9 +6,11 @@ services:
         FS_XMLRPC: 8081
         FS_EVENT_PASSWORD: ClueCon
         FS_DEFAULT_PASSWORD: extension
+        FS_EVENT_PORT: 8021
       volumes:
         - ./event_socket.conf.xml:/etc/freeswitch/autoload_configs/event_socket.conf.xml:ro
         - ./dialplan.xml:/etc/freeswitch/dialplan/sip-dialplan.xml:rw
+        - ABSOLUTE_ROUTE_TO_AUTOCALLS_PROJECT/AutoCallsApi/wwwroot/audios:/audios:rw
       networks:
         red:
           ipv4_address: 172.16.238.10
